@@ -5,6 +5,207 @@
   }
   body {
     background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .delivery-wrapper {
+    flex: 1;
+    padding: 2rem 0;
+    margin-top: 80px;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .delivery-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .delivery-card .card-body {
+    padding: 2rem;
+  }
+
+  .map-container {
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  .form-group h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .route-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+  }
+
+  .route-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .route-info strong {
+    color: var(--primary-blue);
+    margin-right: 0.5rem;
+  }
+
+  .delivery-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .delivery-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .map-container {
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar {
+    background-color: var(--primary-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--secondary-blue) !important;
+  }
+
+  .nav-link.active {
+    color: var(--secondary-blue) !important;
+  }
+
+  .success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .success-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.5s ease;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .success-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+  }
+
+  .success-message {
+    margin: 1rem 0;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+    transform: translateY(-2px);
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-2px);
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
   .navbar, .footer {
     background-color: var(--primary-blue);
