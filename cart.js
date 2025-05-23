@@ -138,6 +138,6 @@ document.getElementById('finalizarCompra').addEventListener('click', function() 
         // Limpar carrinho
         localStorage.removeItem('carrinho');
         // Redirecionar para a página inicial
-        window.location.href = 'index.html';
+        window.location.href = 'cart.html';
     }
 });
